@@ -54,3 +54,5 @@ mle, mom = mod.students_dof(returns)
 assert isinstance(mle, float)
 assert isinstance(mom, float)
 
+
+# %%
