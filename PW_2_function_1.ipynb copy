@@ -51,7 +51,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 266,
+   "execution_count": 254,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -97,7 +97,7 @@
     "    m_stats = process(m_returns, 12 ).rename(\"Monthly\")\n",
     "    q_stats = process(q_returns, 4  ).rename(\"Quarterly\")\n",
     "\n",
-    "    # Concatenate the series into a dataframe\n",
+    "    # Concatenate the series\n",
     "    stats = pd.concat([d_stats, w_stats, m_stats, q_stats], axis=1,)\n",
     "\n",
     "    return stats"
@@ -112,7 +112,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 261,
+   "execution_count": 238,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -131,7 +131,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 267,
+   "execution_count": 255,
    "metadata": {},
    "outputs": [
     {
@@ -147,7 +147,7 @@
       "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Daily</th>\n      <th>Weekly</th>\n      <th>Monthly</th>\n      <th>Quarterly</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>mean</th>\n      <td>28.538662</td>\n      <td>28.289407</td>\n      <td>28.425414</td>\n      <td>28.425414</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>24.374321</td>\n      <td>24.607536</td>\n      <td>26.623630</td>\n      <td>28.637370</td>\n    </tr>\n    <tr>\n      <th>skew</th>\n      <td>-4.757964</td>\n      <td>-1.657068</td>\n      <td>-2.246333</td>\n      <td>-2.539100</td>\n    </tr>\n    <tr>\n      <th>kurt</th>\n      <td>1926.154100</td>\n      <td>259.886859</td>\n      <td>39.946341</td>\n      <td>19.050505</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
      },
      "metadata": {},
-     "execution_count": 267
+     "execution_count": 255
     }
    ],
    "source": [
@@ -156,7 +156,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 263,
+   "execution_count": 256,
    "metadata": {},
    "outputs": [
     {
@@ -172,7 +172,7 @@
       "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Daily</th>\n      <th>Weekly</th>\n      <th>Monthly</th>\n      <th>Quarterly</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>mean</th>\n      <td>-5.979325</td>\n      <td>-5.843228</td>\n      <td>-5.955597</td>\n      <td>-5.955597</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>30.837179</td>\n      <td>29.356705</td>\n      <td>30.292363</td>\n      <td>23.630928</td>\n    </tr>\n    <tr>\n      <th>skew</th>\n      <td>-54.359123</td>\n      <td>-9.026684</td>\n      <td>-2.100969</td>\n      <td>-0.332872</td>\n    </tr>\n    <tr>\n      <th>kurt</th>\n      <td>8692.463139</td>\n      <td>463.854233</td>\n      <td>32.750841</td>\n      <td>5.518090</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
      },
      "metadata": {},
-     "execution_count": 263
+     "execution_count": 256
     }
    ],
    "source": [
@@ -181,7 +181,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 264,
+   "execution_count": 257,
    "metadata": {},
    "outputs": [
     {
@@ -197,7 +197,7 @@
       "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Daily</th>\n      <th>Weekly</th>\n      <th>Monthly</th>\n      <th>Quarterly</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>mean</th>\n      <td>-0.156677</td>\n      <td>-0.156140</td>\n      <td>-0.156959</td>\n      <td>-0.156959</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>24.952721</td>\n      <td>23.945518</td>\n      <td>21.392437</td>\n      <td>20.419585</td>\n    </tr>\n    <tr>\n      <th>skew</th>\n      <td>-2.072475</td>\n      <td>-2.223145</td>\n      <td>0.264286</td>\n      <td>0.453413</td>\n    </tr>\n    <tr>\n      <th>kurt</th>\n      <td>4342.802645</td>\n      <td>299.008351</td>\n      <td>61.924148</td>\n      <td>15.765948</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
      },
      "metadata": {},
-     "execution_count": 264
+     "execution_count": 257
     }
    ],
    "source": [
@@ -206,7 +206,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 265,
+   "execution_count": 258,
    "metadata": {},
    "outputs": [
     {
@@ -222,19 +222,12 @@
       "text/html": "<div>\n<style scoped>\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n  <thead>\n    <tr style=\"text-align: right;\">\n      <th></th>\n      <th>Daily</th>\n      <th>Weekly</th>\n      <th>Monthly</th>\n      <th>Quarterly</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <th>mean</th>\n      <td>12.664971</td>\n      <td>12.376700</td>\n      <td>12.614713</td>\n      <td>12.614713</td>\n    </tr>\n    <tr>\n      <th>std</th>\n      <td>11.734284</td>\n      <td>10.572372</td>\n      <td>9.676764</td>\n      <td>5.904805</td>\n    </tr>\n    <tr>\n      <th>skew</th>\n      <td>-6.408026</td>\n      <td>-1.726791</td>\n      <td>-3.819944</td>\n      <td>1.517633</td>\n    </tr>\n    <tr>\n      <th>kurt</th>\n      <td>1278.319177</td>\n      <td>141.175327</td>\n      <td>32.764912</td>\n      <td>8.486901</td>\n    </tr>\n  </tbody>\n</table>\n</div>"
      },
      "metadata": {},
-     "execution_count": 265
+     "execution_count": 258
     }
    ],
    "source": [
     "summary_statistics(FTSE)"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ]
 }
