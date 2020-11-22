@@ -36,7 +36,7 @@ def summary_statistics(prices):
     # Enclosed function to find mean, std, skew and kurt: gives annualised stats
     def process(returns, n):
         returns_mu = returns.mean()                         # mean returns per time period
-        annual_mu = ((1 + returns_mu) ** n) -1                          # annualised mean returns
+        annual_mu =  returns_mu * n                          # annualised mean returns
 
         returns_err = returns - returns_mu       
         returns_var = (returns_err ** 2).mean()             # average squared return ( 2nd moment)
